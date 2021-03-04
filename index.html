@@ -13,6 +13,7 @@
             <br>
             <h1>Project: Ceres</h1>
             <br>
+            <p id="instructions">Click on the 'Menu' tab to see medicines</p>
             <div class="actions"> 
                     <ul>
                         <li id="Home"><a onclick="medicines('Home')">Home</a></li>
@@ -36,6 +37,7 @@
                case 'Medicines':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
                appendArticles();
+               document.getElementById('instructions').innerHTML = '';
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';
