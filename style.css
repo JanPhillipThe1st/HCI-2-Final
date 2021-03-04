@@ -16,12 +16,16 @@ a{
     margin: auto;
     position: relative;
     text-align: center;
-background-color: rgb(78, 109, 75);
+    background: linear-gradient(217deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70.71%),
+    linear-gradient(127deg, rgba(164, 255, 164, 0.8), rgba(255, 255, 255, 0) 70.71%),
+    linear-gradient(336deg, rgb(156, 255, 64), rgba(255, 255, 255, 0) 70.71%);
 width: 80vw;
 }
 .heading-contents{
     width: 100%;
-    
+    color: rgba(34, 116, 77);
+    background-color: rgba(34, 102, 34, 0.438);
+    mix-blend-mode: multiply;
 }
 .actions{
     display: block;
