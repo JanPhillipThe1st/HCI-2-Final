@@ -1,6 +1,6 @@
 *{
     left: 0%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
 }
 body{
@@ -23,14 +23,14 @@ width: 80vw;
 }
 .heading-contents{
     width: 100%;
-    color: rgba(34, 116, 77);
+    color: rgb(16, 39, 28);
     background-color: rgba(34, 102, 34, 0.438);
-    mix-blend-mode: multiply;
+    mix-blend-mode:darken;
 }
 .actions{
     display: block;
     background-color: rgb(185, 177, 144);
-    height:auto;
+    padding-bottom: 6vh;
 }
 .actions ul{
     position: relative;
@@ -43,11 +43,31 @@ width: 80vw;
     padding: 10px;
 }
 .actions ul li:hover{
-    background-color: rgb(26, 24, 19);
+    background-color: rgb(163, 52, 52);
     transition-duration: .4s;
-    mix-blend-mode: luminosity;
-    color: rgb(221, 198, 169);
+    color: rgb(59, 48, 35);
 }
 #frame{
-    height: 60vh;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    animation: floatLeft 3s ease-in;
+}
+#frame2{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.075);
+    margin: 5% 5%;
+    text-align: center;
+}
+#frame2 h2{
+    font-size: 2.5em;
+}
+ #frame2 p{
+    margin: 5% 5%;
+    text-indent: 10vw;
+    font-size: 1.5em;
+    text-align: justify
+}
+@keyframes floatLeft{
+    from{};
+    to{color: black};
 }

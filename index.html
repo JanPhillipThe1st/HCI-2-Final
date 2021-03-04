@@ -21,17 +21,21 @@
                         <li id="Medicines"><a onclick="medicines('Medicines')">Medicines</a></li>
                     </ul>
                     <br>
-                    <div id="frame"></div>
+                    <div id="frame">
+                    </div>
+                    <div id="frame2"></div>
+                        <script type="application/javascript" src="./animations.js"></script>
             </div>
         </div>
     </div>
-    <script>
+    <script >
         function medicines(li){
            let listItem =  document.getElementById(li);
            let listItems = ['Medicines','Feed','Menu','Home'];
            switch(li){
                case 'Medicines':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
+               appendArticles();
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';
@@ -46,6 +50,7 @@
 
                case 'Feed':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
+               document.getElementById('frame2').innerHTML = '';
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';
@@ -85,13 +90,8 @@
                    }
                 });
                break;
-            
            }
         }
-        let frame = document.getElementById('frame');
-           let fr = new ReadableStream();
-        frame.style.position = 'relative';
-           frame.style.left = '-50vh';
         </script>
 </body>
 </html>
