@@ -13,6 +13,7 @@
             <br>
             <h1>Project: Ceres</h1>
             <br>
+            <p id="instructions">Click on the 'Medicines' tab to see medicines</p>
             <div class="actions"> 
                     <ul>
                         <li id="Home"><a onclick="medicines('Home')">Home</a></li>
@@ -21,7 +22,10 @@
                         <li id="Medicines"><a onclick="medicines('Medicines')">Medicines</a></li>
                     </ul>
                     <br>
-                    <div id="frame"></div>
+                    <div id="frame">
+                    </div>
+                    <div id="frame2"></div>
+                        <script type="application/javascript" src="./animations.js"></script>
             </div>
         </div>
     </div>
@@ -32,6 +36,8 @@
            switch(li){
                case 'Medicines':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
+               appendArticles();
+               document.getElementById('instructions').innerHTML = '';
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';
@@ -46,6 +52,7 @@
 
                case 'Feed':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
+               document.getElementById('frame2').innerHTML = '';
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';
@@ -85,7 +92,6 @@
                    }
                 });
                break;
-            
            }
         }
         </script>
