@@ -129,3 +129,6 @@ One studyTrusted Source examined prior research on black seed and asthma to asse
         frameContents.style.position = 'relative';
            frameContents.innerHTML += articles.join();
 }
+function appendFeed(){
+    
+}
