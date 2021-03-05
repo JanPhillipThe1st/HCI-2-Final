@@ -8,10 +8,9 @@
 body{
     margin: auto;
     background-color: rgb(195, 236, 198);
+    background-image: url(assets/images/bgImg.png);
 }
 a{
-
-    text-decoration: none;
     color: inherit;
 }
 .heading{
@@ -22,6 +21,27 @@ a{
     linear-gradient(127deg, rgba(164, 255, 164, 0.8), rgba(255, 255, 255, 0) 70.71%),
     linear-gradient(336deg, rgb(156, 255, 64), rgba(255, 255, 255, 0) 70.71%);
 width: 80vw;
+}
+.heading h1{
+    font-size: 3.4em;
+    font-weight: bolder;
+}
+.article{
+    position: relative;
+    margin: 2vh 2vh;
+    padding: 2vh 2vh 2vh;
+    background-color: rgb(159, 238, 163);
+    color: rgb(149, 214, 112);
+}
+.article:hover{
+    margin: auto;
+    left: -4.5em;
+    width: 110%;
+    background-color: rgb(120, 148, 89);
+    color: rgb(16, 19, 13);
+    box-shadow: 0px 5px 5px 2px rgb(10, 10, 9);
+    transition-duration: 1s;
+
 }
 .heading-contents{
     width: 100%;
@@ -37,6 +57,7 @@ width: 80vw;
     padding-bottom: 6vh;
 }
 .actions ul{
+    font-size: 1.3em;
     position: relative;
     left: -2.5vw;
     list-style-type: none;
@@ -69,7 +90,8 @@ width: 80vw;
     margin: 5% 5%;
     text-indent: 10vw;
     font-size: 1.5em;
-    text-align: justify
+    text-align: justify;
+
 }
 @keyframes floatLeft{
     from{};
