@@ -137,6 +137,7 @@ width: 80vw;
     color: rgb(87, 134, 118);
     font-size: 2em;
     transition-duration: 1s;
+
 }
 @keyframes floatLeft{
     from{};
