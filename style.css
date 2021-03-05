@@ -1,6 +1,8 @@
 *{
     left: 0%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
     position: relative;
 }
 body{
@@ -43,9 +45,11 @@ width: 80vw;
 }
 .heading-contents{
     width: 100%;
+
     color: rgb(16, 39, 28);
     background-color: rgba(34, 102, 34, 0.438);
     mix-blend-mode:darken;
+
 }
 .actions{
     display: block;
