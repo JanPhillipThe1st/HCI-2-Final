@@ -14,21 +14,22 @@
             <h1>Project: Ceres</h1>
             <br>
             <p id="instructions">Click on the 'Medicines' tab to see medicines</p>
-            <div class="actions"> 
-                    <ul>
-                        <li id="Home"><a onclick="medicines('Home')">Home</a></li>
-                        <li id="Menu"><a onclick="medicines('Menu')">Menu</a></li>
-                        <li id="Feed"><a onclick="medicines('Feed')">Feed</a></li>
-                        <li id="Medicines"><a onclick="medicines('Medicines')">Medicines</a></li>
-                    </ul>
-                    <br>
-                    <div id="frame">
-                    </div>
-                    <div id="frame2"></div>
-                        <script type="application/javascript" src="./animations.js"></script>
-            </div>
         </div>
+        <div class="actions"> 
+            <ul>
+                <li id="Home"><a onclick="medicines('Home')">Home</a></li>
+                <li id="Menu"><a onclick="medicines('Menu')">Menu</a></li>
+                <li id="Feed"><a onclick="medicines('Feed')">Feed</a></li>
+                <li id="Medicines"><a onclick="medicines('Medicines')">Medicines</a></li>
+            </ul>
+            <br>
+            <div id="frame">
+            </div>
+            <div id="frame2"></div>
+                <script type="application/javascript" src="./functions.js"></script>
     </div>
+    </div>
+    
     <script >
         function medicines(li){
            let listItem =  document.getElementById(li);
@@ -53,6 +54,7 @@
                case 'Feed':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
                document.getElementById('frame2').innerHTML = '';
+               document.getElementById('instructions').innerHTML = '';
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';
@@ -67,6 +69,8 @@
 
                case 'Menu':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
+               document.getElementById('frame2').innerHTML = '';
+               document.getElementById('instructions').innerHTML = '';
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';
@@ -81,6 +85,9 @@
 
                case 'Home':
                document.getElementById('frame').innerHTML =`<h1>This is the ${li} tab</h1>`;
+               document.getElementById('frame2').innerHTML = '';
+               document.getElementById('instructions').innerHTML = '';
+               renderHome();
                listItems.forEach((object) => {
                    if(object == li){
                     document.getElementById(object).style.backgroundColor = '#80fd80';

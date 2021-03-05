@@ -1,7 +1,9 @@
+let i = 0;
+let articles = [];
 function appendArticles(){
 let frameContents = document.getElementById("frame2");
-let articles = [];
     articles.push(`
+    <div class='article'>
     <h2>Medicinal plants For Anti-Malaria </h2>
 <p>Malaria is one of the world’s most important parasitic disease and a leading cause of death especially in developing countries. It is endemic in about 100 developing countries, leading to about 1.2 million estimated deaths each year in Africa, with pregnant women and children below 5 years being mostly affected. A wide range of medicinal plants is employed for the treatment of malaria, since majority of the people who get infected cannot afford the existing expensive orthodox medicines. The problem of resistance to existing antimalarial agents by parasite has necessitated the search for new and potent agents, and the focus of researchers is on natural products especially medicinal plants since active compounds like quinine and artemisinin were isolated from plants and have been lead compounds for antimalarial drug development. Various medicinal plants have been investigated for their anti-malarial activity and some with demonstrated potent in vitro activity have been reviewed below. </p>
 
@@ -20,9 +22,8 @@ E. guineensis Jacq (Arecaceae), popularly known as oil palm is a monocotyledonou
 C. sylvestris var. lingua (Cambess.) Eichler, (Salicaceae) is an evergreen shrub or small tree with long, slender branches and a very dense globose crown. Usually 4–6 m tall, but can grow up to 20 m high, with wide distribution throughout South America. It has been employed in traditional medicine for treating snake bites, wounds, inflammation, fevers, gastric ulcers and diarrhea.
 Cupania vernalis
 C. vernalis Cambess. (Sapindaceae) is a semi-deciduous tree with elongated and dense crown, which can grow up to 10–22 m tall. It can be found in almost all forest formations in Brazil, South America, Argentina, Uruguay, Paraguay and Bolivia. The tree serves as source of tannins and wood locally, and in traditional medicine as diuretic, stimulant, expectorant, natural surfactant, sedative and for treating stomach-ache and dermatitis. </p>
-
-    `);
-    articles.push(`
+</div>`);
+    articles.push(`<div class='article'>
     <h2>Natural Remedies for High Cholesterol</h2>
 
 <p>Natural or complementary treatments for heart disease often aim to control cholesterol levels, lower blood pressure, and improve heart health. Typically, research on such treatments is limited, compared with that of conventional medical treatments.
@@ -45,8 +46,10 @@ Also, hawthorn can have negative interactions with many prescription medications
 Flax seed comes from the flax plant. Both flax seed and flaxseed oil contain high levels of alpha-linolenic acid (ALA). This is an omega-3 fatty acid that may help lower your risk of heart disease.
 
 Research on the benefits of flaxseed for heart health has produced mixed resultsTrusted Source, reports the NCCIH. Some studies suggest that flaxseed preparations may help lower cholesterol, particularly among people with high cholesterol levels and postmenopausal women.</p>
+</div>
 `);
 articles.push(`
+<div class='article'>
 <h2> How to Treat UTI Using Natural Herbal Medicine</h2>
 
 <p>Urinary tract infections or UTI is an infection of any part of your urinary system, including the urethra, bladder, kidneys, and ureters. Thankfully, aside from commercial antibiotics, herbal medicine for UTI is available.
@@ -72,6 +75,8 @@ Nevertheless, here is the best herbal medicine for UTI you can try against urina
 <p>Cornsilk and horsetail
 
  Both of these herbs have a diuretic effect and can soothe irritated mucous membranes. </p>
+ </div>
+ <div class='article'>
  <h2> How To Prevent And Treat Appendicitis Naturally</h2>
 
 <p> Appendicitis is a chronic condition, which, if left untreated, can cause a great deal of pain. Here's how you can treat it naturally. Appendix pain or appendicitis takes place as a result of appendix inflammation. Appendicitis is a chronic condition, which, if left untreated, can cause a great deal of pain. It occurs when the appendix gets blocked or infected, and the worst part is that there are no warning signs of this condition whatsoever.
@@ -94,7 +99,8 @@ Mint is also a useful home remedy for treating appendicitis. It helps in treatin
 <p> Fenugreek
 
 Fenugreek is known for its benefits in treating appendicitis naturally. Primarily, fenugreek prevents the formation of mucus and pus inside the appendix, thereby preventing pain. You can boil two tablespoons of fenugreek seeds in one liter of water for about 30 minutes. Then strain it and drink it twice daily to see treat this condition. </p>
-
+</div>
+<div class='article'>
 <h2>Herbs for Severe Asthma </h2>
 
 <p>If you’re living with severe asthma and can’t seem to get relief from your symptoms, you may be wondering what options you have. A few small studies have shown that herbal supplements can ease asthma symptoms. These herbs range from those found in your pantry to common traditional Chinese medicine herbs.
@@ -125,10 +131,20 @@ Still, more research on humans is needed to prove the effectiveness of these her
 This spice is also known as Nigella sativa. Some studiesTrusted Source suggest that it has medicinal benefits, including reducing asthma symptoms.
 
 One studyTrusted Source examined prior research on black seed and asthma to assess its effectiveness. The study concluded that prior research shows black seed may help asthma symptoms, inflammation, and airway function. It also emphasized the need for more research. </p>
-`);
+</div>`);
         frameContents.style.position = 'relative';
-           frameContents.innerHTML += articles.join();
+           frameContents.innerHTML += articles.join("");
+i+=1;
 }
-function appendFeed(){
-    
+if(i>1){
+    articles.forEach((object)=>object = '');
+    alert('area cleared');
+}
+function renderHome(){
+ let frame =  document.getElementById("frame2");
+ let contents = [];
+ let h2 = document.appendChild('P');
+ let paragraph = document.createTextNode(contents.join(""));
+ h2.appendChild(paragraph);
+frame.appendChild(h2);
 }
